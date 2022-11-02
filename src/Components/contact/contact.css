@@ -1,0 +1,132 @@
+ .c{
+     height: 100vh;
+     position: relative;
+ }
+
+ .c-bg{
+     width: 20px;
+     height: 115vh;
+     background-color: #13294B;
+     position: absolute;
+ }
+
+.c-wrapper {
+    padding: 0px 50px;
+    display: flex;
+}
+
+.c-left{
+    flex: 1;
+}
+
+.c-right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10vh 10px;
+}
+
+.c-title{
+    font-size: 60px;
+    width: 80%;
+}
+
+.c-info-item{
+    display: flex;
+    align-items: center;
+    margin: 50px 0px;
+    font-weight: 300;
+    width: 70%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibre, 'Trebuchet MS', sans-serif;
+}
+
+.c-icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.c-desc{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibre, 'Trebuchet MS', sans-serif;
+}
+
+form{
+    margin-top: 20px;
+}
+
+input{
+    width: 50%;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 10px 0px;
+    font-size: 25px;
+    font-weight: 1000;
+    padding-left: 10 px;
+}
+
+textarea{
+    width: 100%;
+    margin: 10px 0px;
+    font-size: 25px;
+    font-weight: 1000;
+    padding-left: 10 px;
+}
+
+button{
+    border: none;
+    padding: 15px;
+    background-color: #13294B;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibre, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    cursor:pointer;
+}
+
+@media screen and (max-width: 480px){
+    .c-wrapper{
+        flex-direction: column;
+        padding: 20px 50px;
+    }
+
+    .c-title{
+        font-size: 30px;
+    }
+
+    .c-info-item{
+        margin: 20px 0px;
+        width: 100%;
+    }
+
+    .c-desc{
+        display: none;
+    }
+
+    .c-right{
+        margin: 20px 10px;
+    }
+
+    form{
+        margin-top: 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    input{
+        width: 35%;
+        height: 40px;
+        margin: 10px;
+        margin-left: 0;
+
+    }
+
+    button{
+        margin-top: 10px;
+    }
+
+    .c-bg{
+        height: 160vh;
+    }
+}

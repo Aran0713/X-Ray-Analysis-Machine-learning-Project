@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)file:///C:/Users/Aran%20A/Desktop/Web/HTML%20course/animation2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Animation</title>
+
+    <style>
+        
+        body{
+            margin: 0;
+            display: flex;
+
+            justify-content: space-around;
+           /* align-items: flex-end;*/
+            height: 7vh; 
+            background-color: rgb(173, 216, 230);
+        }
+
+        .box{
+            width: 7vh;
+            height: 7vh; 
+            background-color: rgb(0,100,150);
+            position: relative;
+            
+            animation-name: box-animation;
+            animation-duration: 1.5s;
+            animation-delay: 1s;
+            animation-iteration-count: 10;
+            animation-direction: normal;
+            animation-timing-function: ease-in-out;
+            
+            /*animation: box-animation 1.5s ease-in-out 1s 2 normal;*/
+        }
+
+        .box.box1{
+            animation-duration: 1s;
+            animation-delay: 0.2s;
+        }
+        .box.box2{
+            animation-duration: 1.25s;
+            animation-delay: 0.4s;
+        }
+        .box.box3{
+            animation-duration: 1.60s;
+            animation-delay: 0.6s;
+        }
+        .box.box4{
+            animation-duration: 1.2s;
+            animation-delay: 0.8s;
+        }
+        .box.box5{
+            animation-duration: 1.10s;
+            animation-delay: 1s;
+        }
+        .box.box6{
+            animation-duration: 1.5s;
+            animation-delay: 1.2s;
+        }
+        .box.box7{
+            animation-duration: 1.4s;
+            animation-delay: 1.4s;
+        }
+        .box.box8{
+            animation-duration: 1.15s;
+            animation-delay: 1.6s;
+        }
+        .box.box9{
+            animation-duration: 1.3s;
+            animation-delay: 1.8s;
+        }
+        .box.box10{
+            animation-duration: 1.45s;
+            animation-delay: 2.0s;
+        }
+        .box.box11{
+            animation-duration: 1.05s;
+            animation-delay: 2.2s;
+        }
+        .box.box12{
+            animation-duration: 1.35s;
+            animation-delay: 2.4s;
+        }
+        .box.box13{
+            animation-duration: 1.55s;
+            animation-delay: 2.6s;
+        }
+        .box.box14{
+            animation-duration: 1.15s;
+            animation-delay: 2.8s;
+        }
+        .box.box15{
+            animation-duration: 1.30s;
+            animation-delay: 3.0s;
+        }
+        
+        
+
+        @keyframes box-animation{
+            0%{
+                top: 0;
+                border-radius: 5em;
+            }
+            /*25%{
+                top: 15em;
+                transform: rotate(0deg);
+                border-radius: 5em;
+            }*/
+            50%{
+                top: 34.2em;
+                transform: rotate(360deg);
+                border-radius: 5em;
+            }
+            /*75%{
+                top: 15em;
+                border-radius: 5em;
+            }*/
+            100%{
+                top: 0;
+                border-radius: 5em;
+
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+    <div class="box box6"></div>
+    <div class="box box7"></div>
+    <div class="box box8"></div>
+    <div class="box box9"></div>
+    <div class="box box10"></div>
+    <div class="box box11"></div>
+    <div class="box box12"></div>
+    <div class="box box13"></div>
+    <div class="box box14"></div>
+    <div class="box box15"></div>
+
+   
+</body></html>
