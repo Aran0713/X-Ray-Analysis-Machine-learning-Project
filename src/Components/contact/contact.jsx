@@ -17,7 +17,7 @@ const Contact = () => {
 
     const sendEmail = (e) =>{
         e.preventDefault();
-        alert(name + "has successfully sent an email to Aran Abrahamlingam!")
+        alert(name + "has successfully sent an email!")
 
         emailjs.sendForm('service_jclm1rl', 'template_mxb0gvl', formRef.current, 'QorUSfyGMetQIKlrc') // You need to pay using emailjs to actually send the email
             .then((result) => {
@@ -46,7 +46,7 @@ const Contact = () => {
                                 alt=""
                                 className="c-icon"
                             />
-                            (647)-619-0713
+                            Number
                         </div>
 
                         <div className="c-info-item">
@@ -55,7 +55,7 @@ const Contact = () => {
                                 alt=""
                                 className="c-icon"
                             />
-                            aran0713@hotmail.com
+                            email
                         </div>
 
                         <div className="c-info-item">
@@ -64,7 +64,7 @@ const Contact = () => {
                                 alt=""
                                 className="c-icon"
                             />
-                            https://www.linkedin.com/in/aranabrahamlingam1313/
+                            linkedin
                         </div>
 
                         <div className="c-info-item">
@@ -73,7 +73,7 @@ const Contact = () => {
                                 alt=""
                                 className="c-icon"
                             />
-                            Toronto, ON M1K 
+                            Location 
 
                         </div>
                     </div>
