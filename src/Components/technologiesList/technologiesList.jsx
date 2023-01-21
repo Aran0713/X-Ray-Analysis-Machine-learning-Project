@@ -17,6 +17,10 @@ const TechnologiesList = () => {
                 </p>
             </div>
 
+
+
+
+            
         </div>
     )
 }
