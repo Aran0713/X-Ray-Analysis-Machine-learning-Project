@@ -14,7 +14,7 @@ const handleSubmit = (event) => {
   let formData = new FormData();
   formData.append("image", "image");
 
-  fetch("https://your-server-url.com/upload", {
+  fetch("", {
     method: "POST",
     body: formData,
   })
@@ -34,12 +34,20 @@ const TechnologiesList = () => {
 
         <div className="tl-text">
           <h1 className="tl-title">Our Technology</h1>
-          <p className="tl-desc">Text</p>
         </div>
-        {/* /// */}
-        <p className="c-desc">
-          Please fill out the form. I will get back to you as soon as possible.
-        </p>
+        <br />
+        <div style={{ width: 600 }}>
+          <p className="c-desc">
+            The application is meant to take an image of a patient's lungs and
+            detect wether the cells in their body are cancerous.
+          </p>
+          <img
+            src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fnews.mit.edu%2F2019%2Fmimic-chest-x-ray-database-0201&psig=AOvVaw0R-RgUhVktXiAqwdkh8o4K&ust=1674429144481000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNjs4OXk2fwCFQAAAAAdAAAAABAJ"
+            alt=""
+          />
+          ;
+        </div>
+
         <form action="">
           <label>
             {" "}
