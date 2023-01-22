@@ -2,7 +2,7 @@ import "./contact.css";
 import Phone from "../../img/phone.png";
 import Email from "../../img/email.png";
 import Linkedin from "../../img/linkedin.png";
-import Address from "../../img/address.png";
+import GitHub from "../../img/GitHub-Logo.png";
 import React, { useRef, useState } from "react";
 import emailjs from 'emailjs-com';
 
@@ -42,20 +42,19 @@ const Contact = () => {
                     <div className="c-info">
                         <div className="c-info-item">
                             <img
-                                src={Phone}
+                                src={Linkedin}
                                 alt=""
                                 className="c-icon"
                             />
-                            Number
+                            https://www.linkedin.com/in/aranabrahamlingam1313/
                         </div>
-
                         <div className="c-info-item">
                             <img
-                                src={Email}
+                                src={Linkedin}
                                 alt=""
                                 className="c-icon"
                             />
-                            email
+                            https://www.linkedin.com/in/ethan-kunce/
                         </div>
 
                         <div className="c-info-item">
@@ -64,16 +63,16 @@ const Contact = () => {
                                 alt=""
                                 className="c-icon"
                             />
-                            linkedin
+                            https://www.linkedin.com/in/kaleellawrence-boxx/
                         </div>
 
                         <div className="c-info-item">
                             <img
-                                src={Address}
+                                src={GitHub}
                                 alt=""
                                 className="c-icon"
                             />
-                            Location 
+                            https://github.com/Aran0713/X-Ray-Analysis-Machine-learning-Project
 
                         </div>
                     </div>
