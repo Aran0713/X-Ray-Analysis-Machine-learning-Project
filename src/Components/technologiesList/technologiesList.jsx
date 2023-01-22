@@ -1,29 +1,31 @@
 import "./technologiesList.css";
 import React, { useState } from "react";
 
-function ImageUpload() {
+
+const TechnologiesList = () => {
   const [image, setImage] = useState(null);
 
   const handleChange = (event) => {
     setImage(event.target.files[0]);
   };
-}
 
-const handleSubmit = (event) => {
-  event.preventDefault();
-  let formData = new FormData();
-  formData.append("image", "image");
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // handleChange(event);
+    // setImage(event.target.files[0]);
+    let formData = new FormData();
+    // formData.append(event.target.files[0]);
+    formData.append('file', image);
+    console.log(formData);
+  
+    fetch("http://localhost:5000", {
+      method: "POST",
+      body: formData,
+    }).then((response) => response.json()).then((data) => console.log(data)).catch((error) => console.error(error));
+  
+  };
 
-  fetch("", {
-    method: "POST",
-    body: formData,
-  })
-    .then((response) => response.json())
-    .then((data) => console.log(data))
-    .catch((error) => console.error(error));
-};
 
-const TechnologiesList = () => {
   return (
     <div>
       {" "}
@@ -51,12 +53,11 @@ const TechnologiesList = () => {
         <form action="">
           <label>
             {" "}
-            Upload Image: <input type="file" name="image" />
+            Upload Image: <input type="file" name="image" onChange={handleChange} />
           </label>
           <br />
-          <button id="btn" type="submit">
-            {" "}
-            Submit{" "}
+          <button id="btn" type="submit" onClick={handleSubmit}>
+            Submit
           </button>
         </form>
       </div>
