@@ -3,25 +3,42 @@ import React, { useState } from "react";
 
 
 const TechnologiesList = () => {
-  const [image, setImage] = useState(null);
+  // src={require("../../img/src/MIMIC-CXR-Chest-X-Ray-00_0.jpeg")}
+  const [image, setImage] = useState(require("../../img/MIMIC-CXR-Chest-X-Ray-00_0.jpeg"));
+  const [previewImage, setPreviewImage] = useState(require("../../img/MIMIC-CXR-Chest-X-Ray-00_0.jpeg"));
+
+  const [Diagnosis, setDiagnosis] = useState([]);
+
+
+
+  // const 
 
   const handleChange = (event) => {
     setImage(event.target.files[0]);
+    setPreviewImage(URL.createObjectURL(event.target.files[0]));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    // console.log(image);
+
     // handleChange(event);
     // setImage(event.target.files[0]);
     let formData = new FormData();
     // formData.append(event.target.files[0]);
     formData.append('file', image);
-    console.log(formData);
+    // console.log(formData);
   
     fetch("http://localhost:5000", {
       method: "POST",
       body: formData,
-    }).then((response) => response.json()).then((data) => console.log(data)).catch((error) => console.error(error));
+    })
+      .then((response) => response.json())
+      .then((data) =>{ 
+        console.log(data);
+        setDiagnosis(data.Diagnosis);
+      })
+      .catch((error) => console.error(error));
   
   };
 
@@ -44,10 +61,9 @@ const TechnologiesList = () => {
             detect wether the cells in their body are cancerous.
           </p>
           <img
-            src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fnews.mit.edu%2F2019%2Fmimic-chest-x-ray-database-0201&psig=AOvVaw0R-RgUhVktXiAqwdkh8o4K&ust=1674429144481000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNjs4OXk2fwCFQAAAAAdAAAAABAJ"
-            alt=""
+            src={previewImage}
+            // height={200} width={200}
           />
-          ;
         </div>
 
         <form action="">
@@ -60,6 +76,13 @@ const TechnologiesList = () => {
             Submit
           </button>
         </form>
+
+        <div className="tl-Navbar">
+test
+
+        </div>
+
+        
       </div>
     </div>
   );

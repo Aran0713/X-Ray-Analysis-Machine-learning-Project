@@ -63,6 +63,16 @@ P {
   color: #2e1114;
 }
 
+.tl-Navbar {
+  height: 30px;
+  background-color: #b1a296;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 600;
+  color: #2e1114;
+}
+
 ul {
   padding: 10px 30px;
 }
