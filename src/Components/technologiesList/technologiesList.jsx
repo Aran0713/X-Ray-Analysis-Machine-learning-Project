@@ -1,36 +1,14 @@
 import "./technologiesList.css";
 import React, { useState } from "react";
 
-<<<<<<< HEAD
 
 const TechnologiesList = () => {
   const [image, setImage] = useState(null);
-=======
-export default function technologiesList(props) {
-  function ImageUpload() {
-    const [image, setImage] = useState(null);
->>>>>>> f79ad0ca2a863d4ed3a046d66885cfc77262f961
 
-    let handleChange = (event) => {
-      setImage(event.target.files[0]);
-    };
-  }
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    let formData = new FormData();
-    formData.append("image", "image");
-
-    fetch("", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch((error) => console.error(error));
+  const handleChange = (event) => {
+    setImage(event.target.files[0]);
   };
 
-<<<<<<< HEAD
   const handleSubmit = (event) => {
     event.preventDefault();
     // handleChange(event);
@@ -48,8 +26,6 @@ export default function technologiesList(props) {
   };
 
 
-=======
->>>>>>> f79ad0ca2a863d4ed3a046d66885cfc77262f961
   return (
     <div>
       {" "}
@@ -67,30 +43,26 @@ export default function technologiesList(props) {
             The application is meant to take an image of a patient's lungs and
             detect wether the cells in their body are cancerous.
           </p>
-          <img src="" alt="" />
+          <img
+            src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fnews.mit.edu%2F2019%2Fmimic-chest-x-ray-database-0201&psig=AOvVaw0R-RgUhVktXiAqwdkh8o4K&ust=1674429144481000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNjs4OXk2fwCFQAAAAAdAAAAABAJ"
+            alt=""
+          />
+          ;
         </div>
 
         <form action="">
           <label>
             {" "}
-<<<<<<< HEAD
             Upload Image: <input type="file" name="image" onChange={handleChange} />
           </label>
           <br />
           <button id="btn" type="submit" onClick={handleSubmit}>
             Submit
-=======
-            Upload Image:{" "}
-            <input type="file" name="image" onChange={this.handleChange} />
-          </label>
-          <br />
-          <button id="btn" type="submit" onClick={this.handleSubmit}>
-            {" "}
-            Submit{" "}
->>>>>>> f79ad0ca2a863d4ed3a046d66885cfc77262f961
           </button>
         </form>
       </div>
     </div>
   );
-}
+};
+
+export default TechnologiesList;
