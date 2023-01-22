@@ -19,7 +19,10 @@ type 'deactivate' to disable
 Install flask
 </h1>
 
+>pip install Flask
 
-Install Flask 
+<h1>
+Run flask
+</h1>
 
-pip install Flask
+>flask --app hello run
