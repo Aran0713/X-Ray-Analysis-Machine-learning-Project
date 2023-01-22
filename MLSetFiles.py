@@ -5,7 +5,7 @@ import cv2
 import random
 import pickle
 
-DataDir = 'C:/Users/Aran A/Desktop/Hackathon/Diseases'
+DataDir = 'C:/Users/Aran A/Desktop/Hackathon/X-Ray Analysis/Diseases'
 Categories = [f for f in os.listdir(DataDir) if os.path.isdir(os.path.join(DataDir, f))]
 #print(Categories)
 
