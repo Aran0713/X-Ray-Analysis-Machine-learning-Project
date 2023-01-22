@@ -14,7 +14,7 @@ def prepare(filepath):
 
 model = tf.keras.models.load_model("X-Ray-Analysis.h5")
 
-prediction = model.predict([prepare('00000008_000.png')])
+prediction = model.predict([prepare('00013716_000.png')])
 print(prediction[0][0])
 print(Categories[int(prediction[0][0])])
 
