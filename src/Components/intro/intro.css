@@ -12,13 +12,13 @@
 
 .i-left-wrapper{
     padding: 50px;
-    height: 50%;
+    height: 87%;
     /**background-color: #E3E2DF; **/
     display: flex;
     flex-direction: column;
     display: flex;
     flex-direction: column;
-    justify-content:space-between
+    justify-content:start;
    
 }
 
@@ -28,11 +28,11 @@
 }
 
 .i-name{
-    font-size: 60px;
+    font-size: 40px;
 }
 
 .i-title{
-    height: 50px;
+    height: 40px;
     overflow: hidden;
 }
 
