@@ -1,4 +1,5 @@
 import "./technologiesList.css";
+import DDiagnosis from "./DDescription.jsx";
 import React, { useState } from "react";
 
 
@@ -7,7 +8,7 @@ const TechnologiesList = () => {
   const [image, setImage] = useState(require("../../img/MIMIC-CXR-Chest-X-Ray-00_0.jpeg"));
   const [previewImage, setPreviewImage] = useState(require("../../img/MIMIC-CXR-Chest-X-Ray-00_0.jpeg"));
 
-  const [Diagnosis, setDiagnosis] = useState(["No Diagnosis"]);
+  const [diagnosis, setDiagnosis] = useState(["No Diagnosis"]);
 
 
   const handleChange = (event) => {
@@ -73,6 +74,11 @@ const TechnologiesList = () => {
             Submit
           </button>
         </form>
+
+        {/* </Diagnosis> */}
+        <DDiagnosis dataSet={diagnosis}/>
+
+
       </div>
     </div>
   );
