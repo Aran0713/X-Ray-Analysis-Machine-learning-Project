@@ -67,8 +67,6 @@ const TechnologiesList = () => {
 
         {/* </Diagnosis> */}
         <DDiagnosis dataSet={diagnosis}/>
-
-
       </div>
     </div>
   );
