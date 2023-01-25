@@ -43,31 +43,21 @@ const TechnologiesList = () => {
 
   return (
     <div>
-      {" "}
       <div className="tl">
-        <div className="t-store">
-          <div className="t-bg"></div>
-        </div>
-
         <div className="tl-text">
           <h1 className="tl-title">Our Technology</h1>
         </div>
-        <br />
-        <div style={{ width: 600 }}>
+     
+        <div className="tl-desc">
           <p className="c-desc">
-            The application is meant to take an image of a patient's lungs and
-            detect wether the cells in their body are cancerous.
+            Upload a Chest X-ray and our application will let you what type of illness you have.
           </p>
-          <img
-            src={previewImage}
-            // height={200} width={200}
-          />
+          <img src={previewImage} alt="default"/>
         </div>
 
         <form action="">
-          <label>
-            {" "}
-            Upload Image: <input type="file" name="image" onChange={handleChange} />
+          <label className="t-uploadText">
+            Upload Image: <input className = "t-inputFile" type="file" name="image" onChange={handleChange} />
           </label>
           <br />
           <button id="btn" type="submit" onClick={handleSubmit}>
