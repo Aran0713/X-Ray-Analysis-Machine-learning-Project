@@ -1,1 +1,5 @@
 ./node_modules/*
+
+./X.pickle
+
+./Y.pickle
