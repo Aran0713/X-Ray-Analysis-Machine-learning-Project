@@ -1,8 +1,0 @@
-./node_modules/
-
-./X.pickle
-
-./Y.pickle
-
-/flaskTest/uploads/
-/flaskTest/__pycache__/
