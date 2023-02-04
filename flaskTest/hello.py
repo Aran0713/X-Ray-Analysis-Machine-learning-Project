@@ -10,8 +10,11 @@ import tensorflow as tf
 from flask_cors import CORS
 
 
-DataDir = '../../Diseases'
+DataDir = '/mnt/sdb/services/hackfit2023/Diseases'
+#need to implement*** Throw error if can't open directory
 Categories = [f for f in os.listdir(DataDir) if os.path.isdir(os.path.join(DataDir, f))]
+
+
 
 UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
@@ -54,9 +57,9 @@ def upload_file():
             directoryAndFile = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(directoryAndFile)
             model = tf.keras.models.load_model("X-Ray-Analysis.h5")
-            print(model)
+            # print(model)
             prediction = model.predict([prepare(directoryAndFile)])
-            print(prediction)
+            # print(prediction)
             diagnosis = Categories[int(prediction[0][0])]
             print(diagnosis)
             #insert image processing function here.
@@ -68,11 +71,11 @@ def upload_file():
 
             return {
                 "Diagnosis" : diagnosis,
-                "Description" : ["Cancer Bad"],
+                # "Description" : ["Cancer Bad"],
                 # "diagonsis" : "description"
             }
             # return redirect(url_for('download_file', name=filename))
     return {
-        "Diagnosis" : ["No Diagnosis"],
-        "Description": ["No Diagnosis, no death"],
+        "Diagnosis" : ["No Diagnosis yet"],
+        # "Description": ["No Diagnosis, no death"],
     }
