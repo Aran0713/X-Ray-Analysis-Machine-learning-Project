@@ -10,10 +10,18 @@ I recommend installing the virtual environment. Use a virtual environment to man
 > cd myproject
 > py -3 -m venv venv
 
+windows
 > venv\Scripts\activate
+Linux/Mac
+. venv/bin/activate
 
 type 'deactivate' to disable
 >deactivate
+
+
+Jan 31st/2023
+I installed venv in the home directory of flask user, as the executable binaries in venv were not enabled in the folder permisions of the shared drive
+
 
 <h1>
 Install flask
