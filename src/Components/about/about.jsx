@@ -1,5 +1,4 @@
 import "./about.css"
-import Feynman from "../../../src/img/feynman.png"
 
 const about = () => {
     return (

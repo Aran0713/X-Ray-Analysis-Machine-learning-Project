@@ -5,9 +5,7 @@ const Intro = () => {
         <div className = "i">
             <div className="i-left">
                 <div className="i-left-wrapper">
-                    <h2 className="i-intro"></h2>
                     <h1 className="i-name">X-Ray Insight: The AI-Powered Diagnosis Platform</h1>
-
                     <div className="i-title">
                         <div className ="i-title-wrapper">
                             <div className="i-title-item">X-Ray Analysis</div>

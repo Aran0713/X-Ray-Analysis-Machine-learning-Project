@@ -1,6 +1,4 @@
 import "./contact.css";
-import Phone from "../../img/phone.png";
-import Email from "../../img/email.png";
 import Linkedin from "../../img/linkedin.png";
 import GitHub from "../../img/GitHub-Logo.png";
 import React, { useRef, useState } from "react";
