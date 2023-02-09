@@ -89,25 +89,11 @@ li{
 
 }
 
-
-@media screen and (max-width: 480px){
-    .tl{
-        padding: 10px;
-        padding-top: 40px;
-    }
-
-    .tl-text{
-        width: 100%;
-    }
-
-    .tl-desc{
-        display: none;
-    }
-
-    .t{
-        width: 40%;
-        height: 45vh;
-    }
-
-
+.t-Submitbutton{
+    background-color: #B1A296;
 }
+
+.t-diagnosis{
+    padding: 20px;
+}
+

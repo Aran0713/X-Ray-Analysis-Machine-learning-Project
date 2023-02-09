@@ -78,10 +78,6 @@ const Contact = () => {
 
 
                 <div className="c-right">
-                    <p className="c-desc">
-                    Please fill out the form. I will get back to you as soon as possible. 
-                    </p>
-
                     <form ref={formRef} onSubmit={sendEmail} id="my_form" action="">
                         <input type="text" placeholder="Name" name="user_name" value = {name} onChange={handleChange}/>
                         <input type="text" placeholder="Subject" name="user_subject" />

@@ -1,5 +1,5 @@
 import "./technologiesList.css";
-import DDiagnosis from "./DDescription.jsx";
+import DDiagnosis from "./diagnosis.jsx";
 import React, { useState } from "react";
 
 
@@ -27,7 +27,7 @@ const TechnologiesList = () => {
     formData.append('file', image);
     // console.log(formData);
   
-    fetch("http://localhost:5000", {
+    fetch("http://kunce.ca:8264", {
       method: "POST",
       body: formData,
     })
@@ -45,7 +45,7 @@ const TechnologiesList = () => {
     <div>
       <div className="tl">
         <div className="tl-text">
-          <h1 className="tl-title">Our Technology</h1>
+          <h1 className="tl-title">Our Technology: Insight</h1>
         </div>
      
         <div className="tl-desc">
@@ -60,13 +60,15 @@ const TechnologiesList = () => {
             Upload Image: <input className = "t-inputFile" type="file" name="image" onChange={handleChange} />
           </label>
           <br />
-          <button id="btn" type="submit" onClick={handleSubmit}>
+          <button className="t-Submitbutton" id="btn" type="submit" onClick={handleSubmit}>
             Submit
           </button>
         </form>
 
         {/* </Diagnosis> */}
-        <DDiagnosis dataSet={diagnosis}/>
+        <div className="t-diagnosis">
+          <DDiagnosis dataSet={diagnosis}/>
+        </div>
       </div>
     </div>
   );
